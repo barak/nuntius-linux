@@ -1,0 +1,31 @@
+Source: nuntius-linux
+Section: gnome
+Priority: extra
+Maintainer: Barak A. Pearlmutter <bap@debian.org>
+Build-Depends: debhelper (>=9),
+	dh-autoreconf, intltool,
+	libgio2.0-cil-dev,
+	libglib2.0-dev,
+	libgtk-3-dev,
+	libjson-glib-dev,
+	libqrencode-dev,
+	valac (>= 0.23.3)
+Standards-Version: 3.9.7
+Homepage: https://github.com/holylobster
+Vcs-Git: git://github.com/barak/nuntius-linux.git
+
+Package: nuntius
+Architecture: any
+Multi-Arch: foreign
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: share notifications from Android phone or tablet via Bluetooth or LAN
+ Deliver notifications from your Android phone or tablet to your
+ computer using Bluetooth or LAN.  To use, you will need to install a
+ companion tool on your phone or tablet and either pair it via
+ Bluetooth or point it at an on-screen QR code.
+ .
+ You may need to restart your session to auto-start nuntius.
+ .
+ This is similar to KDE Connect (Debian package kdeconnect), albeit
+ much less mature, but uses 200MB of GNOME infrastructure instead of
+ 200MB of KDE infrastructure.

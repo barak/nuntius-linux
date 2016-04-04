@@ -1,0 +1,45 @@
+From: "Barak A. Pearlmutter" <barak+git@pearlmutter.net>
+Date: Mon, 4 Apr 2016 14:05:23 +0100
+Subject: autogen dh-autoreconf
+
+Simplify autogen.sh to make it play well with dh-autoreconf
+---
+ autogen.sh | 28 +++-------------------------
+ 1 file changed, 3 insertions(+), 25 deletions(-)
+
+diff --git a/autogen.sh b/autogen.sh
+index 81af577..9c6cd12 100755
+--- a/autogen.sh
++++ b/autogen.sh
+@@ -1,28 +1,6 @@
+ #!/bin/sh
+ # Run this to generate all the initial makefiles, etc.
++set -e
+ 
+-test -n "$srcdir" || srcdir=`dirname "$0"`
+-test -n "$srcdir" || srcdir=.
+-
+-OLDDIR=`pwd`
+-cd $srcdir
+-
+-AUTORECONF=`which autoreconf`
+-if test -z $AUTORECONF; then
+-    echo "*** No autoreconf found, please install it ***"
+-    exit 1
+-fi
+-
+-INTLTOOLIZE=`which intltoolize`
+-if test -z $INTLTOOLIZE; then
+-    echo "*** No intltoolize found, please install the intltool package ***"
+-    exit 1
+-fi
+-
+-git submodule update --init --recursive
+-
+-autopoint --force || exit $?
+-AUTOPOINT='intltoolize --automake --copy' autoreconf --force --install --verbose
+-
+-cd $OLDDIR
+-test -n "$NOCONFIGURE" || "$srcdir/configure" "$@"
++autopoint --force
++AUTOPOINT='intltoolize --automake --copy' autoreconf --force --install --verbose $@
