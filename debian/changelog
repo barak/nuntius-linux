@@ -1,3 +1,11 @@
+nuntius-linux (0.2.0-2) unstable; urgency=medium
+
+  * Merge upstream development, just a translation
+  * Bump to debhelper 10
+  * Bump standards version
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Tue, 03 Jan 2017 14:56:47 +0100
+
 nuntius-linux (0.2.0-1) unstable; urgency=medium
 
   * Initial release (closes: #819980)
