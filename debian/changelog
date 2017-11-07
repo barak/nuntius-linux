@@ -1,3 +1,11 @@
+nuntius-linux (0.2.0-3) unstable; urgency=medium
+
+  * Bump standards version
+  * Priority optional per policy
+  * Remove now-unnecessary (as of dh10) build dependency on dh-autoreconf
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Tue, 07 Nov 2017 15:14:47 +0000
+
 nuntius-linux (0.2.0-2) unstable; urgency=medium
 
   * Merge upstream development, just a translation
