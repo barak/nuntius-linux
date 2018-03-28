@@ -10,7 +10,7 @@ include /usr/share/dpkg/buildflags.mk
 export VALAFLAGS:=$(foreach w,$(CPPFLAGS) $(CFLAGS) $(LDFLAGS),-X $(w))
 
 %:
-	dh $@ --with autoreconf 
+	dh $@
 
 override_dh_autoreconf:
 	dh_autoreconf ./autogen.sh
