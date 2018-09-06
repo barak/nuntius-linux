@@ -1,3 +1,9 @@
+nuntius-linux (0.2.0-4) unstable; urgency=medium
+
+  * Include upstream fix for new version of valac (closes: #907936)
+
+ -- Barak A. Pearlmutter <bap@debian.org>  Thu, 06 Sep 2018 09:41:34 +0100
+
 nuntius-linux (0.2.0-3) unstable; urgency=medium
 
   * Bump standards version
