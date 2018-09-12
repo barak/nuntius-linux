@@ -17,8 +17,5 @@ override_dh_autoreconf:
 
 override_dh_auto_test:
 
-override_dh_auto_install:
-	dh_auto_install -- appdatadir='$$(datadir)/metainfo'
-
 override_dh_installchangelogs:
 	dh_installchangelogs NEWS
