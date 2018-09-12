@@ -27,5 +27,6 @@ Description: share notifications from Android phone or tablet via Bluetooth or L
  You may need to restart your session to auto-start nuntius.
  .
  This is similar to KDE Connect (Debian package kdeconnect), albeit
- much less mature, but uses 200MB of GNOME infrastructure instead of
- 200MB of KDE infrastructure.
+ much less mature, but uses of GNOME infrastructure instead of KDE
+ infrastructure, which under some circumstances can result is a
+ significantly smaller total footprint.
