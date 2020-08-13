@@ -2,6 +2,7 @@ nuntius-linux (0.2.0-6) UNRELEASED; urgency=low
 
   * debian/copyright: use spaces rather than tabs to start continuation lines.
   * Bump debhelper from old 11 to 13.
+  * Set debhelper-compat version in Build-Depends.
 
  -- Barak A. Pearlmutter <bap@debian.org>  Thu, 13 Aug 2020 18:52:48 -0000
 
